@@ -14,7 +14,8 @@ et  DESCRIPTION:
 #
 # Run HiCUP truncater script
 #
-results/%.trunc.fastq.gz:	data/%.fastq.gz
+results/%_R1.trunc.fastq.gz \
+results/%_R2.trunc.fastq.gz:	data/%_R1.fastq.gz data/%_R2.fastq.gz
 	mkdir -p `dirname $target`
 	hicup_truncater \
 		--threads $THREADS_NUMBER \
@@ -22,4 +23,5 @@ results/%.trunc.fastq.gz:	data/%.fastq.gz
 		--re1 $ENZYME \
 		--outdir `dirname $target` \
 		$prereq
+
 

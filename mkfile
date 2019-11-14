@@ -12,11 +12,11 @@ et  DESCRIPTION:
 # Load configuration file
 < config.mk
 #
-# Run HiCUP truncator script
+# Run HiCUP truncater script
 #
 results/%.trunc.fastq.gz:	data/%.fastq.gz
 	mkdir -p `dirname $target`
-	hicup_truncator \
+	hicup_truncater \
 		--threads $THREADS_NUMBER \
 		--zip \
 		--re1 $ENZYME \

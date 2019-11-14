@@ -16,7 +16,7 @@ et  DESCRIPTION:
 #
 results/%.trunc.fastq.gz:	data/%.fastq.gz
 	mkdir -p `dirname $target`
-	hicup \
+	hicup_truncator \
 		--threads $THREADS_NUMBER \
 		--zip \
 		--re1 $ENZYME \

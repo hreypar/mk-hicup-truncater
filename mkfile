@@ -9,15 +9,17 @@ et  DESCRIPTION:
 #
 # AUTHOR: HRG
 #
-# Run HiCUP pipeline
+# Load configuration file
+< config.mk
 #
-results/%:	data/%
+# Run HiCUP truncator script
+#
+results/%.trunc.fastq.gz:	data/%.fastq.gz
 	mkdir -p `dirname $target`
 	hicup \
 		--threads $THREADS_NUMBER \
 		--zip \
-		--bowtie2 $BOWTIE2_PATH \
-		--index $INDEX_PATH \
-		--digest $DIGESTED_GENOME_PATH \
-		--
+		--re1 $ENZYME \
+		--outdir `dirname $target` \
+		$prereq
 

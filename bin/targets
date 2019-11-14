@@ -6,6 +6,6 @@
 find -L data/ \
 	-name "*.fastq.gz" \
 | sed -r \
-	-e 's#.fastq.gz$#.sam#g' \
+	-e 's#.fastq.gz$#.trunc.fastq.gz#g' \
 	-e 's#^data/#results/#'
 

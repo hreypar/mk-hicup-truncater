@@ -4,8 +4,9 @@
 ## bin/targets
 
 find -L data/ \
-	-name "*.fastq.gz" \
+	-name "*_R1.fastq.gz" \
 | sed -r \
-	-e 's#.fastq.gz$#.trunc.fastq.gz#g' \
-	-e 's#^data/#results/#'
+	-e 's#^data/#results/#' \
+	-e 's#.fastq.gz$#.trunc.fastq.gz#' \
+| sort
 

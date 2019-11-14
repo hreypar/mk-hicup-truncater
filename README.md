@@ -1,14 +1,11 @@
-# mk-hicup
+# mk-hicup-truncater
 
-Run the HiCUP pipeline on raw FASTQ files to obtain aligned, filtered and deduplicated SAM files.
+Run the HiCUP truncater step on raw FASTQ files to obtain reads without the ligation junction that can be better aligned to the reference genome. 
 
 ## About ##
 
-HiCUP pre-processes Hi-C FASTQ reads truncating them at the specified ligation junction, then aligns them to a reference genome and performs filtering according to the digested reference genome. It also deduplicates read pairs.
-
 The reads are truncated when a ligation junction is found and the nucleotides to the right are discarded (even if there is a second ligation junction present).
 
-You need other tools to perform downstream Hi-C analysis (binning, normalization, etcetera).
 
-The output from HiCUP is a SAM/BAM file with the paired reads on adjacent lines.
+The output from HiCUP is a pair of sequence files with the same name as the infput files, follwed by the suffix `trunc.fastq`. The HiCUP truncater also outputs a date stamped file with the truncation summary (how  many reads were truncated) and SVG QC charts.
 

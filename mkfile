@@ -1,11 +1,11 @@
-et  DESCRIPTION:
-# mk module to run HiCUP
+# DESCRIPTION:
+# mk module to run HiCUP truncater
 #
 # USAGE:
 # Single target execution: `mk <TARGET>` where TARGET is
-# any line printed by the script `bin/mk-targets`
+# any line printed by the script `bin/targets`
 #
-# Multiple target execution in tandem `bin/mk-targets | xargs mk`
+# Multiple target execution in tandem `bin/targets | xargs mk`
 #
 # AUTHOR: HRG
 #

@@ -18,7 +18,7 @@ results/%_R1.trunc.fastq.gz \
 results/%_R2.trunc.fastq.gz:	data/%_R1.fastq.gz data/%_R2.fastq.gz
 	mkdir -p `dirname $target`
 	hicup_truncater \
-		--threads $THREADS_NUMBER \
+		--threads $HT_THREADS_NUMBER \
 		--zip \
 		--re1 $ENZYME \
 		--outdir `dirname $target` \

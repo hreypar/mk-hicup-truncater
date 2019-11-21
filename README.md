@@ -10,3 +10,5 @@ The output from HiCUP is a pair of sequence files with the same name as the infp
 
 Note that the HiCUP directory that contains the perl scripts should be in the $PATH because they are called directly in the `mkfile`.
 
+[HiCUP scripts](https://www.bioinformatics.babraham.ac.uk/projects/hicup/scripts_description/)
+
